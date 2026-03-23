@@ -4,6 +4,8 @@ export interface Link {
   url: string;
   title: string | null;
   favicon: string | null;
+  description: string | null;
+  notes: string | null;
   tags: string[];
   snoozed_until: string | null;
   on_next_session: boolean;

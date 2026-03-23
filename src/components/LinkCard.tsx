@@ -47,6 +47,16 @@ export default function LinkCard({ link, onDelete }: Props) {
           )}
         </div>
 
+        {link.description && (
+          <p className="text-xs text-gray-500 mt-1 line-clamp-2">{link.description}</p>
+        )}
+
+        {link.notes && (
+          <p className="text-xs text-indigo-700 bg-indigo-50 rounded px-2 py-1 mt-1 italic">
+            {link.notes}
+          </p>
+        )}
+
         {link.tags && link.tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-1.5">
             {link.tags.map((tag) => (

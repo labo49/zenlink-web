@@ -81,6 +81,8 @@ export default function ImportModal({ session, onClose }: Props) {
             url: r.url,
             title: r.title || r.url,
             favicon: `https://www.google.com/s2/favicons?domain=${new URL(r.url).hostname}&sz=32`,
+            description: null,
+            notes: null,
             tags: parseTags(r.tags ?? ''),
             snoozed_until: null,
             on_next_session: false,
